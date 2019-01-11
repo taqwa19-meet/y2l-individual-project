@@ -1,0 +1,52 @@
+
+body, html {
+  height: 100%;
+}
+
+.background-image { 
+
+  background-image: url("marble.png") ;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+p {
+  font-family: "Courier New", Times, serif;
+  font-size: 35px;
+  padding-top: 20px;
+}
+h1 {
+	padding-top: 20px;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #323;
+  width: 100%
+  }
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #100;
+}
+
+
