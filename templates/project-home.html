@@ -3,14 +3,13 @@
 <head>
 	<title>My website</title>
 
-	<link rel="stylesheet" type="text/css" href="project_style.css">
-	<link rel="stylesheet" type="text/css" href="project_info">
+	<link rel="stylesheet" type="text/css" href="static/home_page.css">
+	<!-- <link rel="stylesheet" type="text/css" href="project_info.html"> -->
 
 <ul>
-  <li><a class="active" href="#project-home">Home</a></li>
-  <li><a href="#project_info">About us</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+  <li><a href="{{ url_for('info') }}">About us</a></li>
+  <li><a href="{{ url_for('post') }}">Create post</a></li>
+  <li><a href="{{ url_for('sign_up') }}">sign up</a>
 </ul>
 </head>
 
@@ -21,8 +20,6 @@
 <br> cursing women or any form of
 <br> mistreatment against women in the state of israel.
 </p></center>
-
-
 
 
 

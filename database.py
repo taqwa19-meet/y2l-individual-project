@@ -8,5 +8,9 @@ Base.metadata.create_all(engine)
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
-def function(parameter):
+def sign_up(username, password):
+	user_object = User(name=username,
+		password=password)
+	    session.add(user_object)
+	    session.commit()
     pass
