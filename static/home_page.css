@@ -49,11 +49,4 @@ li a:hover {
   background-color: #100;
 }
 
-.backgroundimage{
-  background-image: url("pastelpink.png") ;
-  height: 100%;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
