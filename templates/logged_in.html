@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"> -->
+  </head>
+  <body>
+    <div class="navbar">
+      <h3> {{ name }} </h3>
+   
+
+
+  <title>My website</title>
+
+  <link rel="stylesheet" type="text/css" href="static/home_page.css">
+  <!-- <link rel="stylesheet" type="text/css" href="project_info.html"> -->
+
+<ul>
+  <li><a href="{{ url_for('info') }}">About us</a></li>
+  <li><a href ="{{url_for('post') }}">Create a post</a></li>
+  <li><a href="{{ url_for('home_page') }}">Home</a></li>
+</ul>
+</head>
+
+<body class = 'background-image'>
+<center><h1>Violence against women</h1></center>
+<center><p>violence against women :
+<br> hitting, murdering, controlling,
+<br> cursing women or any form of
+<br> mistreatment against women in the state of israel.
+</p></center>
+
+
+
+</body>
+</html>
+
+    <div class="everything">
+      <div class="box">
+       <h1> Posts</h1>
+      </div>
+      <div class="container"> 
+        <div class="comments">
+            <ul>
+              {%for post in posts%}
+              <li> {{ post }}</li>
+                      <br>
+              {% endfor %}
+            </ul>
+        </div>
+          <a class="sidebar_text" href='{{url_for("post")}}'>
+            <div class="sidebar">
+            </div>
+          </a>
+      </div>
+    </div>
+  </body>
+</html>
