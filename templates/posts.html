@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Posts</title>
+	<h1>Posts</h1>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='Posts.css')}}">
+
+</head>
+<body class="background">
+
+<div class="everything">
+      <div class="box">
+      </div>
+      <div class="container"> 
+        <div class="comments">
+            <ul>
+              {%for post in posts%}
+              <li> {{ post }}</li>
+                      <br>
+              {% endfor %}
+            </ul>
+        </div>
+      </div>
+
+</body>
+</html>

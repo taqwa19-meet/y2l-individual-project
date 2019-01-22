@@ -31,8 +31,11 @@ def sign_up():
 		return render_template('sign_up.html')
 
 
-@app.route('/Create_post')
+@app.route('/create-post', methods=['GET','POST'])
 def post():
+	if request.method == 'POST':
+		add_Post(request.form['post_submit'])
+		return redirect(url_for('posts'))
 	return render_template("create_post.html")
 
 @app.route('/log_in',methods= ['GET','POST'])
@@ -56,6 +59,12 @@ def log_in():
 @app.route('/logged_in')
 def logged_in():
 	return render_template('logged_in.html')
+
+
+@app.route('/posts')
+def posts():
+	reversed_posts = reversed(query_all_posts())
+	return render_template('posts.html',posts = reversed_posts )
 
 
 if __name__ == '__main__':

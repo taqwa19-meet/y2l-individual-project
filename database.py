@@ -37,5 +37,19 @@ def query_post_by_id(post_id):
     post = session.query(Post).filter_by(id_table=post_id).first()
     return post
 
+def add_Post(post_string):
+    post_object = Post(post_string=post_string)
+    session.add(post_object)
+    session.commit()
+
+def query_all_posts():
+    posts = session.query(
+        Post).all()
+    return posts
+
+def query_post_by_id(post_id):
+    post = session.query(Post).filter_by(id_table=post_id).first()
+    return post
+
 
     pass
