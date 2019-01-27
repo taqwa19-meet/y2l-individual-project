@@ -3,25 +3,33 @@
 <html>
 <head>
 	<title>Posts</title>
-	<h1>Posts</h1>
 	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='Posts.css')}}">
-
+<div>
+<ul class="nav">
+  <li><a href="{{url_for('home_page')}}">Home</a></li>
+  <li><a href="{{url_for('post')}}">Create post</a></li>
+  <li><a href="{{url_for('info')}}">About us</a></li>
+</ul>
+</div>
+<h1>Posts</h1>
 </head>
 <body class="background">
 
 <div class="everything">
-      <div class="box">
-      </div>
-      <div class="container"> 
-        <div class="comments">
-            <ul>
+    <div class="box">
+        <div class="container"> 
+            <!--<div class="comments">-->
+            <ul style="list-style-type: none; line-height: 1.6;"  >
               {%for post in posts%}
-              <li> {{ post }}</li>
+
+              <li>{{post.username}} : {{ post.post_string }}</li>
                       <br>
               {% endfor %}
             </ul>
+            <!--/div>-->
         </div>
-      </div>
+    </div>
+</div>
 
 </body>
 </html>

@@ -16,8 +16,11 @@ class Post(Base):
     __tablename__ = "Post"
     id_table = Column(Integer, primary_key = True)
     post_string = Column(String)
+    username = Column(String)
+    def __repr__():
+      return("Post post_string: {},Post username: {}".format(self.post_string , self.username))
 
-    def __repr__(self):
-        return ("{} \n "
-            "\n").format(
-                self.post_string)
+    # def __repr__(self):
+    #     return ("{} \n "
+    #         "\n").format(
+    #             self.post_string)

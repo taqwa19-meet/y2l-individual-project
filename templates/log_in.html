@@ -2,10 +2,10 @@
 <html>
   <head>
     <title>Username</title>
-	  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='log_in.css')}}">
+	  <!--<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='log_in.css')}}">-->
   </head>
-  <body>
-    <h1>Please enter your log in information .</h1>
+  <body background="/static/marble.png">
+    <h1 style="text-align: center;">Please enter your log in information .</h1>
     
       <div class= "login_parent" style="padding: 30px;
   border: 3px solid black;
@@ -14,18 +14,19 @@
   margin-left: 370px;
   position: absolute;
   padding-right: 150px;
+  padding-left: 145px;
    ">
         <form action="/log_in", method = 'POST'>
           <div class = "login">
-            <div><label for="uname"><b>Username</b></label></div>
-
+            <h1 style="text-align: center;">Log in</h1>
+            <hr style="text-align: center; margin-left: 75px; margin-right: 75px;">
+            <br>
+            <div style="text-align: center;"><label for="uname"><b>Username</b></label></div>
             <div><input type="text" placeholder="Enter Username" name="uname" required></div>
-
-            <div><label for="psw"><b>Password</b></label></div>
-
+            <div style="text-align: center;"><label for="psw"><b>Password</b></label></div>
             <div><input type="password" placeholder="Enter Password" name="psw" required></div>
 
-            <div><button type="submit">Login</button></div>
+            <div style="text-align: center;"><button type="submit">Log in</button></div>
           </div>
         
 
@@ -34,11 +35,11 @@
       </div> -->
    </form>
    <br>
-  <p><a href="{{url_for('home_page')}}" style="color: #D891A9; padding-left: 85px; text-decoration: none;" >return to home</a></p>
+  <p><a href="{{url_for('home_page')}}" style="color: #BF8095; padding-left: 55px; text-decoration: none;" >return to home</a></p>
   
     
 
-    <p><a href="{{url_for('sign_up')}}" style="color: #D891A9; padding-left: 85px; text-decoration: none;">sign up</a></p>
+    <p><a href="{{url_for('sign_up')}}" style="color: #BF8095; padding-left: 85px; text-decoration: none; ">sign up</a></p>
     </div>
   </body>
 </html

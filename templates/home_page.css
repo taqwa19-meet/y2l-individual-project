@@ -16,8 +16,8 @@ body, html {
 
 p {
   font-family: "Courier New", Times, serif;
-  font-size: 35px;
-  padding-top: 20px;
+  /*font-size: 150px;*/
+  padding-top: 10px;
 }
 h1 {
 	padding-top: 20px;

@@ -34,7 +34,7 @@ def sign_up():
 @app.route('/create-post', methods=['GET','POST'])
 def post():
 	if request.method == 'POST':
-		add_Post(request.form['post_submit'])
+		add_Post(request.form['post_submit'],request.form['username'])
 		return redirect(url_for('posts'))
 	return render_template("create_post.html")
 

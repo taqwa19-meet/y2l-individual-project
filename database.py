@@ -37,8 +37,8 @@ def query_post_by_id(post_id):
     post = session.query(Post).filter_by(id_table=post_id).first()
     return post
 
-def add_Post(post_string):
-    post_object = Post(post_string=post_string)
+def add_Post(post_string,username):
+    post_object = Post(post_string=post_string, username=username)
     session.add(post_object)
     session.commit()
 
